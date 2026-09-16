@@ -111,3 +111,24 @@
   padding: 8px;
   outline: none;
 }
+/* Flower 8273 rose */
+.logo {
+  transform: rotate(-12deg);
+}
+
+.logo::before {
+  width: 55px;
+  height: 45px;
+  left: 20px;
+  top: 5px;
+  border-radius: 50% 45% 55% 40%;
+  transform: rotate(-18deg);
+}
+
+.logo::after {
+  width: 7px;
+  height: 60px;
+  left: 47px;
+  top: 43px;
+  transform: rotate(18deg);
+}
