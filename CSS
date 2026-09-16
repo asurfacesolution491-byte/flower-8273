@@ -1,0 +1,32 @@
+.logo {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+/* Rose head */
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 52px;
+  height: 42px;
+  left: 19px;
+  top: 8px;
+  background: white;
+  border-radius: 50% 45% 55% 40%;
+  transform: rotate(-18deg);
+}
+
+/* Drooping stem */
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 55px;
+  left: 44px;
+  top: 42px;
+  background: white;
+  border-radius: 100%;
+  transform: rotate(18deg);
+}
