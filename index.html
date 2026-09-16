@@ -9,170 +9,214 @@
 
 <body>
 
-  <!-- Large rose -->
-  <div class="logo" aria-label="Flower 8273 rose">
+  <!-- REALISTIC HIGH-CONTRAST ROSE -->
+  <div class="logo">
 
-    <svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 900 1000" xmlns="http://www.w3.org/2000/svg">
 
-      <!-- Main black rose silhouette -->
-      <path
+      <!-- Everything is black unless the light reveals it -->
+      <rect width="900" height="1000" fill="#000"/>
+
+      <!-- Rose shadow -->
+      <ellipse
+        cx="430"
+        cy="420"
+        rx="300"
+        ry="270"
         fill="#000"
-        d="
-        M390 465
-        C315 450 235 420 190 360
-        C145 300 150 215 215 175
-        C255 150 300 155 335 180
-        C355 125 425 105 475 145
-        C510 115 575 135 595 185
-        C665 185 700 250 665 305
-        C640 350 585 385 520 420
-        C485 440 455 455 430 470
-        C475 525 490 600 470 675
-        C455 735 430 785 405 820
-        L350 820
-        C325 770 295 710 290 650
-        C285 575 315 510 390 465
-        Z
-        "
       />
 
-      <!-- Outer petal highlights -->
+      <!-- OUTER PETALS -->
+
       <path
-        d="M190 360 C155 300 170 220 225 185 C205 245 225 310 285 345"
+        d="M430 445
+           C330 455 215 425 160 345
+           C120 285 145 200 215 175
+           C270 155 325 190 350 245
+           C305 220 250 245 235 295
+           C220 345 280 390 350 395
+           C380 400 410 420 430 445Z"
+        fill="#000"
+      />
+
+      <path
+        d="M435 445
+           C510 410 610 385 680 425
+           C750 465 755 555 700 605
+           C655 645 575 630 535 575
+           C570 590 620 575 635 530
+           C650 480 590 450 530 465
+           C490 475 455 465 435 445Z"
+        fill="#000"
+      />
+
+      <path
+        d="M425 445
+           C380 370 375 280 420 220
+           C465 160 555 165 600 225
+           C635 270 615 330 570 360
+           C600 315 575 270 530 265
+           C475 260 455 320 475 375
+           C485 405 465 435 425 445Z"
+        fill="#000"
+      />
+
+      <path
+        d="M420 450
+           C360 430 290 460 260 520
+           C230 580 265 655 335 670
+           C395 685 445 635 455 575
+           C465 520 450 480 420 450Z"
+        fill="#000"
+      />
+
+      <!-- PETAL LIGHTING -->
+      <!-- These are light hitting the curved surfaces, not outlines -->
+
+      <path
+        d="M190 330
+           C155 285 170 225 220 205
+           C255 192 295 205 320 235
+           C275 225 235 245 220 280
+           C205 310 215 340 245 365
+           C220 355 202 345 190 330Z"
+        fill="#fff"
+      />
+
+      <path
+        d="M245 205
+           C275 180 315 195 340 225
+           C320 220 295 230 280 250
+           C265 270 265 295 275 315
+           C245 290 230 245 245 205Z"
+        fill="#fff"
+      />
+
+      <path
+        d="M410 215
+           C430 180 475 165 515 180
+           C485 190 465 215 455 250
+           C445 280 450 315 465 340
+           C425 315 400 265 410 215Z"
+        fill="#fff"
+      />
+
+      <path
+        d="M530 195
+           C570 190 605 215 615 250
+           C580 230 545 240 520 265
+           C500 285 495 315 500 340
+           C475 305 485 230 530 195Z"
+        fill="#fff"
+      />
+
+      <!-- INNER PETAL LIGHT -->
+
+      <path
+        d="M300 350
+           C315 295 365 255 420 270
+           C385 285 365 315 365 350
+           C365 385 390 405 420 420
+           C370 425 315 395 300 350Z"
+        fill="#fff"
+      />
+
+      <path
+        d="M420 270
+           C465 245 520 270 535 315
+           C505 290 470 300 450 330
+           C430 360 435 395 455 415
+           C420 400 400 350 420 270Z"
+        fill="#fff"
+      />
+
+      <!-- DEEP BLACK PETAL FOLDS -->
+
+      <path
+        d="M340 300
+           C365 275 405 265 430 285
+           C395 295 380 320 380 345
+           C380 375 400 395 425 405
+           C385 405 345 375 340 300Z"
+        fill="#000"
+      />
+
+      <path
+        d="M455 315
+           C480 290 515 295 530 320
+           C500 315 480 335 475 360
+           C470 385 485 400 505 415
+           C470 410 450 380 455 315Z"
+        fill="#000"
+      />
+
+      <!-- SMALL WHITE CATCHLIGHTS -->
+      <ellipse cx="300" cy="270" rx="13" ry="8" fill="#fff"/>
+      <ellipse cx="390" cy="235" rx="10" ry="7" fill="#fff"/>
+      <ellipse cx="540" cy="255" rx="12" ry="7" fill="#fff"/>
+
+      <!-- STEM -->
+      <path
+        d="M440 590
+           C430 680 445 775 405 885"
         fill="none"
-        stroke="#fff"
-        stroke-width="18"
+        stroke="#000"
+        stroke-width="55"
         stroke-linecap="round"
       />
 
+      <!-- Stem lit side -->
       <path
-        d="M225 185 C270 145 320 165 345 205 C300 205 270 235 260 275"
-        fill="none"
-        stroke="#fff"
-        stroke-width="16"
-        stroke-linecap="round"
-      />
-
-      <path
-        d="M335 180 C360 125 425 115 470 150 C420 155 385 190 380 240"
-        fill="none"
-        stroke="#fff"
-        stroke-width="17"
-        stroke-linecap="round"
-      />
-
-      <path
-        d="M475 145 C520 115 575 140 590 185 C545 175 505 195 485 235"
-        fill="none"
-        stroke="#fff"
-        stroke-width="16"
-        stroke-linecap="round"
-      />
-
-      <path
-        d="M595 185 C655 185 690 245 665 305 C630 275 585 275 545 300"
-        fill="none"
-        stroke="#fff"
-        stroke-width="17"
-        stroke-linecap="round"
-      />
-
-      <!-- Curled inner petals -->
-      <path
-        d="
-        M285 345
-        C300 275 365 235 430 255
-        C490 275 510 330 475 375
-        C445 415 385 420 350 385
-        C320 355 335 315 370 300
-        C405 285 445 305 450 335
-        C455 360 430 380 405 370
-        "
-        fill="none"
-        stroke="#fff"
-        stroke-width="19"
-        stroke-linecap="round"
-      />
-
-      <path
-        d="M250 365 C300 410 355 425 405 410"
+        d="M425 610
+           C420 700 425 780 400 850"
         fill="none"
         stroke="#fff"
         stroke-width="13"
         stroke-linecap="round"
       />
 
+      <!-- LEAF -->
       <path
-        d="M465 365 C520 345 565 330 610 300"
-        fill="none"
-        stroke="#fff"
-        stroke-width="12"
-        stroke-linecap="round"
+        d="M420 710
+           C350 650 250 660 195 725
+           C275 755 350 750 420 710Z"
+        fill="#000"
       />
 
-      <!-- Small light-catching petal edges -->
+      <!-- Leaf light -->
       <path
-        d="M215 325 C245 350 270 360 295 365"
-        fill="none"
-        stroke="#fff"
-        stroke-width="10"
-        stroke-linecap="round"
-      />
-
-      <path
-        d="M510 250 C535 230 560 225 585 235"
-        fill="none"
-        stroke="#fff"
-        stroke-width="10"
-        stroke-linecap="round"
-      />
-
-      <!-- Stem -->
-      <path
-        d="M405 440
-           C395 525 420 610 405 700
-           C395 755 380 790 365 820"
+        d="M215 720
+           C280 705 345 720 395 715"
         fill="none"
         stroke="#fff"
         stroke-width="15"
         stroke-linecap="round"
       />
 
-      <!-- Stem shadow -->
-      <path
-        d="M420 475
-           C435 565 430 645 420 710"
-        fill="none"
-        stroke="#000"
-        stroke-width="20"
-        stroke-linecap="round"
+      <!-- LIGHT SOURCE -->
+      <circle
+        cx="95"
+        cy="115"
+        r="28"
+        fill="#fff"
       />
 
-      <!-- Leaf -->
-      <path
-        d="
-        M405 620
-        C345 565 265 575 225 625
-        C285 665 350 660 405 620
-        Z
-        "
-        fill="#000"
-      />
-
-      <!-- Leaf illumination -->
-      <path
-        d="M235 625 C285 620 340 630 385 620"
+      <circle
+        cx="95"
+        cy="115"
+        r="55"
         fill="none"
         stroke="#fff"
-        stroke-width="11"
-        stroke-linecap="round"
+        stroke-width="3"
+        opacity="0.8"
       />
 
     </svg>
+
   </div>
 
 
-  <!-- Puzzle window -->
+  <!-- PUZZLE WINDOW -->
   <div class="puzzle-window" id="puzzleWindow">
 
     <div class="window-bar" id="windowBar">
@@ -194,7 +238,6 @@
     </div>
 
   </div>
-
 
   <script src="script.js"></script>
 
