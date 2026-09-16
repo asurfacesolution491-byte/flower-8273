@@ -30,3 +30,33 @@
   border-radius: 100%;
   transform: rotate(18deg);
 }
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 45px;
+  left: 20px;
+  top: 5px;
+  background: white;
+  border-radius: 50% 45% 55% 40%;
+  transform: rotate(-18deg);
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 60px;
+  left: 47px;
+  top: 43px;
+  background: white;
+  border-radius: 100%;
+  transform: rotate(18deg);
+}
