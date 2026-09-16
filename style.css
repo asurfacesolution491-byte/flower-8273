@@ -60,3 +60,54 @@
   border-radius: 100%;
   transform: rotate(18deg);
 }
+.puzzle-window {
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  width: 280px;
+  background: black;
+  border: 2px solid white;
+  color: white;
+  z-index: 100;
+}
+
+.window-bar {
+  height: 32px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: move;
+  user-select: none;
+  font-size: 13px;
+}
+
+.window-bar button {
+  background: black;
+  color: white;
+  border: none;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.window-bar button:hover {
+  background: white;
+  color: black;
+}
+
+.window-content {
+  padding: 15px;
+}
+
+#puzzleInput {
+  width: 100%;
+  box-sizing: border-box;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  padding: 8px;
+  outline: none;
+}
