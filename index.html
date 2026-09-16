@@ -1,21 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FLOWER 8273</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <div class="puzzle-window" id="puzzleWindow">
-  <div class="window-bar" id="windowBar">
-    <span>FLOWER 8273</span>
-    <div>
-      <button id="minimizeButton">−</button>
-      <button id="closeButton">×</button>
-    </div>
+
+<body>
+
+  <!-- Large rose -->
+  <div class="logo" aria-label="Flower 8273 logo">
+    <svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Rose silhouette -->
+      <path
+        fill="black"
+        stroke="white"
+        stroke-width="8"
+        d="
+        M400 470
+        C310 455 215 410 175 325
+        C135 240 185 150 270 155
+        C315 105 385 115 415 160
+        C470 105 555 135 560 205
+        C645 195 690 275 640 340
+        C610 385 545 420 475 450
+        C520 500 535 565 520 625
+        C505 690 470 745 435 785
+        L365 785
+        C330 725 300 665 300 605
+        C300 550 330 505 400 470
+        Z
+        "
+      />
+
+      <!-- Petals -->
+      <path d="M175 325 C125 250 175 145 270 155 C230 205 245 270 300 300"
+        fill="none" stroke="white" stroke-width="15"/>
+
+      <path d="M270 155 C300 105 385 115 415 160 C350 165 325 215 335 270"
+        fill="none" stroke="white" stroke-width="15"/>
+
+      <path d="M415 160 C470 105 555 135 560 205 C500 195 465 235 450 285"
+        fill="none" stroke="white" stroke-width="15"/>
+
+      <path d="M560 205 C645 195 690 275 640 340 C600 300 550 310 510 345"
+        fill="none" stroke="white" stroke-width="15"/>
+
+      <!-- Rose center -->
+      <path
+        d="
+        M300 300
+        C325 245 390 225 435 260
+        C480 295 470 350 430 370
+        C390 390 350 365 360 330
+        C370 300 410 295 430 315
+        C445 330 435 350 415 350
+        "
+        fill="none"
+        stroke="white"
+        stroke-width="14"
+      />
+
+      <!-- Highlights -->
+      <path d="M205 300 C250 345 295 355 335 350"
+        fill="none" stroke="white" stroke-width="10"/>
+
+      <path d="M470 280 C520 265 565 285 600 320"
+        fill="none" stroke="white" stroke-width="10"/>
+
+      <!-- Stem -->
+      <path
+        d="M400 450 C390 555 420 660 400 790"
+        fill="none"
+        stroke="white"
+        stroke-width="18"
+        stroke-linecap="round"
+      />
+
+      <!-- Leaf -->
+      <path
+        d="M400 610 C330 570 255 595 235 650 C300 675 355 660 400 610 Z"
+        fill="black"
+        stroke="white"
+        stroke-width="8"
+      />
+
+    </svg>
   </div>
 
-  <div class="window-content" id="windowContent">
-    <input type="text" id="puzzleInput" placeholder="...">
+  <!-- Puzzle window -->
+  <div class="puzzle-window" id="puzzleWindow">
+
+    <div class="window-bar" id="windowBar">
+      <span>FLOWER 8273</span>
+
+      <div>
+        <button type="button" id="minimizeButton">−</button>
+        <button type="button" id="closeButton">×</button>
+      </div>
+    </div>
+
+    <div class="window-content">
+      <input
+        type="text"
+        id="puzzleInput"
+        placeholder="..."
+        autocomplete="off"
+      >
+    </div>
+
   </div>
-  </div>
-  <div class="logo" aria-label="Flower 8273 logo"></div>
-<body>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
