@@ -5,81 +5,34 @@ let dragging = false;
 let offsetX = 0;
 let offsetY = 0;
 
-windowBar.addEventListener("pointerdown", (event) => {
-  dragging = true;
+if (puzzleWindow && windowBar) {
+  windowBar.addEventListener("pointerdown", (event) => {
+    if (event.target.closest("button")) return;
 
-  const rect = puzzleWindow.getBoundingClientRect();
-  offsetX = event.clientX - rect.left;
-  offsetY = event.clientY - rect.top;
+    const rect = puzzleWindow.getBoundingClientRect();
 
-  windowBar.setPointerCapture(event.pointerId);
-});
+    dragging = true;
+    offsetX = event.clientX - rect.left;
+    offsetY = event.clientY - rect.top;
 
-windowBar.addEventListener("pointermove", (event) => {
-  if (!dragging) return;
+    windowBar.setPointerCapture(event.pointerId);
+  });
 
-  puzzleWindow.style.left = `${event.clientX - offsetX}px`;
-  puzzleWindow.style.top = `${event.clientY - offsetY}px`;
-});
+  windowBar.addEventListener("pointermove", (event) => {
+    if (!dragging) return;
 
-windowBar.addEventListener("pointerup", () => {
-  dragging = false;
-});
-const puzzleWindow = document.getElementById("puzzleWindow");
-const windowBar = document.getElementById("windowBar");
+    puzzleWindow.style.left =
+      `${event.clientX - offsetX}px`;
 
-let dragging = false;
-let offsetX = 0;
-let offsetY = 0;
+    puzzleWindow.style.top =
+      `${event.clientY - offsetY}px`;
+  });
 
-windowBar.addEventListener("pointerdown", (event) => {
-  dragging = true;
+  windowBar.addEventListener("pointerup", () => {
+    dragging = false;
+  });
 
-  const rect = puzzleWindow.getBoundingClientRect();
-  offsetX = event.clientX - rect.left;
-  offsetY = event.clientY - rect.top;
-
-  windowBar.setPointerCapture(event.pointerId);
-});
-
-windowBar.addEventListener("pointermove", (event) => {
-  if (!dragging) return;
-
-  puzzleWindow.style.left = `${event.clientX - offsetX}px`;
-  puzzleWindow.style.top = `${event.clientY - offsetY}px`;
-});
-
-windowBar.addEventListener("pointerup", () => {
-  dragging = false;
-});
-const puzzleWindow = document.getElementById("puzzleWindow");
-const windowBar = document.getElementById("windowBar");
-
-let dragging = false;
-let offsetX = 0;
-let offsetY = 0;
-
-windowBar.addEventListener("pointerdown", (event) => {
-  dragging = true;
-
-  const rect = puzzleWindow.getBoundingClientRect();
-  offsetX = event.clientX - rect.left;
-  offsetY = event.clientY - rect.top;
-
-  windowBar.setPointerCapture(event.pointerId);
-});
-
-windowBar.addEventListener("pointermove", (event) => {
-  if (!dragging) return;
-
-  puzzleWindow.style.left = `${event.clientX - offsetX}px`;
-  puzzleWindow.style.top = `${event.clientY - offsetY}px`;
-});
-
-windowBar.addEventListener("pointerup", () => {
-  dragging = false;
-});
-
-windowBar.addEventListener("pointercancel", () => {
-  dragging = false;
-});
+  windowBar.addEventListener("pointercancel", () => {
+    dragging = false;
+  });
+}
