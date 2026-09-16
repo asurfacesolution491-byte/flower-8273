@@ -1,49 +1,41 @@
 html,
 body {
   margin: 0;
+  width: 100%;
   min-height: 100%;
-  background: black;
-  color: white;
-  overflow: hidden;
+  background: #000;
+  color: #fff;
 }
 
-/* =========================
-   FLOWER 8273 ROSE
-   ========================= */
-
+/* ROSE */
 .logo {
   position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  height: 90vh;
+  transform: translate(-50%, -50%) rotate(8deg);
   z-index: 1;
+  pointer-events: none;
 }
 
 .logo svg {
-  width: min(90vw, 900px);
-  height: min(90vh, 900px);
+  width: 100%;
+  height: 100%;
   display: block;
 }
 
-/* =========================
-   PUZZLE WINDOW
-   ========================= */
-
+/* PUZZLE WINDOW */
 .puzzle-window {
   position: absolute;
   top: 120px;
   left: 30px;
   width: 280px;
-  background: black;
-  color: white;
-  border: 2px solid white;
-  z-index: 1000;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
   box-sizing: border-box;
+  z-index: 100;
 }
 
 .window-bar {
@@ -55,11 +47,13 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid white;
+  background: #000;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+
   cursor: grab;
   user-select: none;
   touch-action: none;
-  font-size: 13px;
 }
 
 .window-bar:active {
@@ -70,18 +64,10 @@ body {
   width: 30px;
   height: 30px;
   padding: 0;
-
-  background: black;
-  color: white;
-  border: none;
-
+  background: #000;
+  color: #fff;
+  border: 0;
   font-size: 18px;
-  cursor: pointer;
-}
-
-.window-bar button:hover {
-  background: white;
-  color: black;
 }
 
 .window-content {
@@ -92,16 +78,13 @@ body {
   width: 100%;
   height: 36px;
   box-sizing: border-box;
-
-  background: black;
-  color: white;
-
-  border: 1px solid white;
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
   padding: 8px;
   outline: none;
 }
 
 #puzzleInput::placeholder {
-  color: white;
-  opacity: 0.6;
+  color: #fff;
 }
