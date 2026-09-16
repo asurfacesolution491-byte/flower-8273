@@ -10,85 +10,167 @@
 <body>
 
   <!-- Large rose -->
-  <div class="logo" aria-label="Flower 8273 logo">
+  <div class="logo" aria-label="Flower 8273 rose">
+
     <svg viewBox="0 0 800 900" xmlns="http://www.w3.org/2000/svg">
 
-      <!-- Rose silhouette -->
+      <!-- Main black rose silhouette -->
       <path
-        fill="black"
-        stroke="white"
-        stroke-width="8"
+        fill="#000"
         d="
-        M400 470
-        C310 455 215 410 175 325
-        C135 240 185 150 270 155
-        C315 105 385 115 415 160
-        C470 105 555 135 560 205
-        C645 195 690 275 640 340
-        C610 385 545 420 475 450
-        C520 500 535 565 520 625
-        C505 690 470 745 435 785
-        L365 785
-        C330 725 300 665 300 605
-        C300 550 330 505 400 470
+        M390 465
+        C315 450 235 420 190 360
+        C145 300 150 215 215 175
+        C255 150 300 155 335 180
+        C355 125 425 105 475 145
+        C510 115 575 135 595 185
+        C665 185 700 250 665 305
+        C640 350 585 385 520 420
+        C485 440 455 455 430 470
+        C475 525 490 600 470 675
+        C455 735 430 785 405 820
+        L350 820
+        C325 770 295 710 290 650
+        C285 575 315 510 390 465
         Z
         "
       />
 
-      <!-- Petals -->
-      <path d="M175 325 C125 250 175 145 270 155 C230 205 245 270 300 300"
-        fill="none" stroke="white" stroke-width="15"/>
-
-      <path d="M270 155 C300 105 385 115 415 160 C350 165 325 215 335 270"
-        fill="none" stroke="white" stroke-width="15"/>
-
-      <path d="M415 160 C470 105 555 135 560 205 C500 195 465 235 450 285"
-        fill="none" stroke="white" stroke-width="15"/>
-
-      <path d="M560 205 C645 195 690 275 640 340 C600 300 550 310 510 345"
-        fill="none" stroke="white" stroke-width="15"/>
-
-      <!-- Rose center -->
+      <!-- Outer petal highlights -->
       <path
-        d="
-        M300 300
-        C325 245 390 225 435 260
-        C480 295 470 350 430 370
-        C390 390 350 365 360 330
-        C370 300 410 295 430 315
-        C445 330 435 350 415 350
-        "
+        d="M190 360 C155 300 170 220 225 185 C205 245 225 310 285 345"
         fill="none"
-        stroke="white"
-        stroke-width="14"
+        stroke="#fff"
+        stroke-width="18"
+        stroke-linecap="round"
       />
 
-      <!-- Highlights -->
-      <path d="M205 300 C250 345 295 355 335 350"
-        fill="none" stroke="white" stroke-width="10"/>
+      <path
+        d="M225 185 C270 145 320 165 345 205 C300 205 270 235 260 275"
+        fill="none"
+        stroke="#fff"
+        stroke-width="16"
+        stroke-linecap="round"
+      />
 
-      <path d="M470 280 C520 265 565 285 600 320"
-        fill="none" stroke="white" stroke-width="10"/>
+      <path
+        d="M335 180 C360 125 425 115 470 150 C420 155 385 190 380 240"
+        fill="none"
+        stroke="#fff"
+        stroke-width="17"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M475 145 C520 115 575 140 590 185 C545 175 505 195 485 235"
+        fill="none"
+        stroke="#fff"
+        stroke-width="16"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M595 185 C655 185 690 245 665 305 C630 275 585 275 545 300"
+        fill="none"
+        stroke="#fff"
+        stroke-width="17"
+        stroke-linecap="round"
+      />
+
+      <!-- Curled inner petals -->
+      <path
+        d="
+        M285 345
+        C300 275 365 235 430 255
+        C490 275 510 330 475 375
+        C445 415 385 420 350 385
+        C320 355 335 315 370 300
+        C405 285 445 305 450 335
+        C455 360 430 380 405 370
+        "
+        fill="none"
+        stroke="#fff"
+        stroke-width="19"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M250 365 C300 410 355 425 405 410"
+        fill="none"
+        stroke="#fff"
+        stroke-width="13"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M465 365 C520 345 565 330 610 300"
+        fill="none"
+        stroke="#fff"
+        stroke-width="12"
+        stroke-linecap="round"
+      />
+
+      <!-- Small light-catching petal edges -->
+      <path
+        d="M215 325 C245 350 270 360 295 365"
+        fill="none"
+        stroke="#fff"
+        stroke-width="10"
+        stroke-linecap="round"
+      />
+
+      <path
+        d="M510 250 C535 230 560 225 585 235"
+        fill="none"
+        stroke="#fff"
+        stroke-width="10"
+        stroke-linecap="round"
+      />
 
       <!-- Stem -->
       <path
-        d="M400 450 C390 555 420 660 400 790"
+        d="M405 440
+           C395 525 420 610 405 700
+           C395 755 380 790 365 820"
         fill="none"
-        stroke="white"
-        stroke-width="18"
+        stroke="#fff"
+        stroke-width="15"
+        stroke-linecap="round"
+      />
+
+      <!-- Stem shadow -->
+      <path
+        d="M420 475
+           C435 565 430 645 420 710"
+        fill="none"
+        stroke="#000"
+        stroke-width="20"
         stroke-linecap="round"
       />
 
       <!-- Leaf -->
       <path
-        d="M400 610 C330 570 255 595 235 650 C300 675 355 660 400 610 Z"
-        fill="black"
-        stroke="white"
-        stroke-width="8"
+        d="
+        M405 620
+        C345 565 265 575 225 625
+        C285 665 350 660 405 620
+        Z
+        "
+        fill="#000"
+      />
+
+      <!-- Leaf illumination -->
+      <path
+        d="M235 625 C285 620 340 630 385 620"
+        fill="none"
+        stroke="#fff"
+        stroke-width="11"
+        stroke-linecap="round"
       />
 
     </svg>
   </div>
+
 
   <!-- Puzzle window -->
   <div class="puzzle-window" id="puzzleWindow">
@@ -112,6 +194,7 @@
     </div>
 
   </div>
+
 
   <script src="script.js"></script>
 
