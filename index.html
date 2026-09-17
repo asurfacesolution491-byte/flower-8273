@@ -5,368 +5,381 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FLOWER 8273</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Natural black-and-white rose */
+    .rose-scene {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+      background: #000;
+    }
+
+    .rose {
+      position: absolute;
+      width: min(105vw, 1100px);
+      height: min(105vh, 1100px);
+      left: 50%;
+      top: 50%;
+      transform: translate(-46%, -50%) rotate(5deg);
+    }
+
+    .rose svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .black {
+      fill: #000;
+      stroke: #000;
+    }
+
+    .white {
+      fill: #fff;
+      stroke: #fff;
+    }
+
+    .outline {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .petal-line {
+      fill: none;
+      stroke: #000;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .light-edge {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 11;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .puzzle-window {
+      z-index: 100;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="logo" aria-label="Illuminated rose">
+  <!-- ROSE -->
+  <div class="rose-scene">
+    <div class="rose">
 
-    <svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 1000 1000" aria-hidden="true">
 
-      <rect width="1200" height="1200" fill="#000"/>
+        <!-- STEM -->
+        <path
+          class="black"
+          d="
+          M535 575
+          C528 635 505 694 472 752
+          C440 808 420 863 424 950
+          L500 950
+          C491 871 510 817 545 764
+          C584 706 602 640 594 568
+          Z"/>
 
-      <!-- ROSE SILHOUETTE -->
+        <!-- LIT SIDE OF STEM -->
+        <path
+          class="white"
+          d="
+          M570 578
+          C574 641 553 698 522 752
+          C489 810 476 863 480 950
+          L500 950
+          C491 869 511 814 545 762
+          C584 704 600 641 594 568
+          Z"/>
 
-      <path
-        d="
-        M560 650
-        C455 635 350 600 275 530
-        C195 455 175 350 220 265
-        C260 190 345 165 420 205
-        C445 125 535 105 605 155
-        C665 105 760 135 785 215
-        C875 195 950 255 940 335
-        C1010 380 1005 475 950 530
-        C900 580 810 595 735 615
-        C665 635 610 655 560 650
-        Z
-        "
-        fill="#000"
-      />
+        <!-- LEAF SHADOW -->
+        <path
+          class="black"
+          d="
+          M492 735
+          C433 698 363 693 314 719
+          C366 752 419 780 480 773
+          C500 766 508 749 492 735
+          Z"/>
 
-      <!-- LEFT OUTER PETAL -->
+        <!-- LEAF LIGHT -->
+        <path
+          class="white"
+          d="
+          M481 744
+          C428 718 375 714 338 727
+          C383 746 425 758 474 758
+          C487 756 492 750 481 744
+          Z"/>
 
-      <path
-        d="
-        M365 535
-        C275 500 215 430 220 350
-        C225 275 280 215 350 215
-        C310 260 305 325 340 375
-        C370 420 420 445 460 455
-        C425 485 395 515 365 535
-        Z
-        "
-        fill="#000"
-      />
+        <!-- LEAF VEIN -->
+        <path
+          class="petal-line"
+          d="
+          M347 729
+          C390 739 430 748 475 754"/>
 
-      <!-- TOP LEFT PETAL -->
+        <!-- ROSE OUTER SHADOW -->
+        <path
+          class="black"
+          d="
+          M287 403
+          C270 347 298 286 354 255
+          C405 227 453 218 503 233
+          C559 203 625 219 663 259
+          C711 273 744 321 733 370
+          C765 413 755 470 719 505
+          C716 559 678 600 627 613
+          C583 646 520 642 480 619
+          C424 635 369 610 348 566
+          C298 548 269 501 279 453
+          C254 431 263 414 287 403
+          Z"/>
 
-      <path
-        d="
-        M420 210
-        C445 135 530 125 595 165
-        C535 175 485 215 470 275
-        C455 325 470 370 495 405
-        C440 370 405 295 420 210
-        Z
-        "
-        fill="#000"
-      />
+        <!-- OUTER LIT PETALS -->
+        <path
+          class="white"
+          d="
+          M305 398
+          C292 350 316 309 361 284
+          C391 268 425 263 454 273
+          C417 288 386 311 367 345
+          C349 375 345 407 351 437
+          C334 427 317 414 305 398
+          Z"/>
 
-      <!-- TOP RIGHT PETAL -->
+        <path
+          class="white"
+          d="
+          M503 247
+          C552 222 613 238 643 275
+          C607 267 570 271 537 291
+          C511 307 492 327 476 351
+          C471 311 481 273 503 247
+          Z"/>
 
-      <path
-        d="
-        M595 165
-        C650 110 750 140 785 215
-        C720 200 665 230 640 280
-        C615 330 625 385 650 420
-        C590 375 565 250 595 165
-        Z
-        "
-        fill="#000"
-      />
+        <path
+          class="white"
+          d="
+          M662 280
+          C706 301 725 340 714 379
+          C703 359 685 342 663 332
+          C641 322 622 316 602 316
+          C620 295 639 283 662 280
+          Z"/>
 
-      <!-- RIGHT OUTER PETAL -->
+        <path
+          class="white"
+          d="
+          M713 392
+          C741 430 732 474 704 500
+          C696 467 680 442 657 423
+          C671 407 691 397 713 392
+          Z"/>
 
-      <path
-        d="
-        M785 215
-        C865 195 935 255 925 330
-        C915 385 875 420 825 435
-        C855 390 845 345 805 315
-        C775 290 760 250 785 215
-        Z
-        "
-        fill="#000"
-      />
+        <!-- INNER PETAL MASS -->
+        <path
+          class="white"
+          d="
+          M362 432
+          C347 394 360 350 394 325
+          C424 302 461 300 490 319
+          C507 287 548 274 583 288
+          C617 301 635 331 631 364
+          C661 371 681 395 681 425
+          C681 459 656 483 627 492
+          C624 529 598 554 565 558
+          C534 581 492 570 474 547
+          C438 558 402 541 391 511
+          C359 498 346 465 362 432
+          Z"/>
 
-      <!-- LOWER LEFT PETAL -->
+        <!-- CENTRAL DARK PETAL -->
+        <path
+          class="black"
+          d="
+          M489 321
+          C462 337 445 362 447 389
+          C449 412 466 425 486 431
+          C472 450 477 476 497 488
+          C519 501 543 491 553 472
+          C567 486 591 484 605 467
+          C620 448 616 425 600 411
+          C616 392 611 367 594 352
+          C574 334 548 334 529 346
+          C520 327 505 317 489 321
+          Z"/>
 
-      <path
-        d="
-        M365 535
-        C315 585 325 670 390 710
-        C455 750 525 715 550 650
-        C565 605 550 555 520 520
-        C470 555 415 555 365 535
-        Z
-        "
-        fill="#000"
-      />
+        <!-- CENTRAL LIGHT CURL -->
+        <path
+          class="white"
+          d="
+          M491 337
+          C472 351 461 371 463 390
+          C465 405 475 414 490 418
+          C501 421 510 416 517 407
+          C506 398 501 388 503 376
+          C505 362 511 351 520 343
+          C510 335 500 333 491 337
+          Z"/>
 
-      <!-- LOWER RIGHT PETAL -->
+        <!-- LOWER INNER PETAL -->
+        <path
+          class="white"
+          d="
+          M402 442
+          C389 469 400 501 425 516
+          C448 531 474 527 490 510
+          C477 492 473 471 482 452
+          C459 460 433 457 402 442
+          Z"/>
 
-      <path
-        d="
-        M520 520
-        C555 575 550 650 590 700
-        C635 755 720 730 750 665
-        C775 610 750 555 710 520
-        C650 550 580 550 520 520
-        Z
-        "
-        fill="#000"
-      />
+        <!-- RIGHT INNER PETAL -->
+        <path
+          class="white"
+          d="
+          M610 414
+          C630 423 640 442 632 460
+          C624 478 605 486 587 478
+          C598 463 600 446 594 431
+          C598 422 603 417 610 414
+          Z"/>
 
-      <!-- ===================== -->
-      <!-- UPPER-RIGHT LIGHT -->
-      <!-- ===================== -->
+        <!-- PETAL SHADOW CREASES -->
+        <path
+          class="petal-line"
+          d="
+          M355 438
+          C378 421 401 416 424 423"/>
 
-      <!-- Bright outer petal -->
+        <path
+          class="petal-line"
+          d="
+          M374 503
+          C397 486 421 482 449 489"/>
 
-      <path
-        d="
-        M780 225
-        C835 210 895 250 900 305
-        C865 285 830 295 800 325
-        C775 350 765 380 770 405
-        C735 365 740 270 780 225
-        Z
-        "
-        fill="#fff"
-      />
+        <path
+          class="petal-line"
+          d="
+          M524 285
+          C548 306 559 326 561 349"/>
 
-      <!-- Bright top petal -->
+        <path
+          class="petal-line"
+          d="
+          M638 343
+          C620 351 607 363 600 378"/>
 
-      <path
-        d="
-        M610 175
-        C655 140 725 155 755 210
-        C710 200 670 225 650 265
-        C630 305 635 345 650 375
-        C610 335 585 215 610 175
-        Z
-        "
-        fill="#fff"
-      />
+        <path
+          class="petal-line"
+          d="
+          M654 490
+          C627 500 608 514 597 535"/>
 
-      <!-- Light across another petal -->
+        <path
+          class="petal-line"
+          d="
+          M454 548
+          C468 530 473 513 468 496"/>
 
-      <path
-        d="
-        M700 300
-        C745 265 805 280 820 325
-        C785 315 755 335 735 365
-        C715 395 720 425 740 450
-        C695 425 670 345 700 300
-        Z
-        "
-        fill="#fff"
-      />
+        <!-- BRIGHT UPPER-RIGHT PETAL HIGHLIGHTS -->
+        <path
+          class="light-edge"
+          d="
+          M548 246
+          C592 237 628 251 650 277"/>
 
-      <!-- Smaller highlight -->
+        <path
+          class="light-edge"
+          d="
+          M667 292
+          C697 310 711 334 710 357"/>
 
-      <path
-        d="
-        M555 225
-        C585 195 625 205 640 235
-        C610 235 590 255 580 280
-        C570 305 575 330 590 350
-        C555 320 545 255 555 225
-        Z
-        "
-        fill="#fff"
-      />
+        <path
+          class="light-edge"
+          d="
+          M718 402
+          C730 429 727 452 716 471"/>
 
-      <!-- Lower right illumination -->
+        <!-- SMALL NATURAL PETAL CURLS -->
+        <path
+          class="white"
+          d="
+          M318 379
+          C311 353 322 329 342 316
+          C334 344 337 366 350 383
+          C340 386 328 385 318 379
+          Z"/>
 
-      <path
-        d="
-        M720 470
-        C775 440 830 455 855 490
-        C815 485 785 505 760 535
-        C740 560 735 585 740 610
-        C705 570 690 505 720 470
-        Z
-        "
-        fill="#fff"
-      />
+        <path
+          class="black"
+          d="
+          M371 292
+          C396 272 424 267 448 275
+          C422 282 402 295 389 313
+          C380 309 374 302 371 292
+          Z"/>
 
-      <!-- ===================== -->
-      <!-- INNER PETALS -->
-      <!-- ===================== -->
+        <path
+          class="black"
+          d="
+          M652 337
+          C676 346 692 362 699 381
+          C680 373 664 369 648 371
+          C652 359 653 348 652 337
+          Z"/>
 
-      <path
-        d="
-        M300 430
-        C315 350 385 295 455 315
-        C415 330 390 365 390 405
-        C390 445 420 470 455 485
-        C390 495 320 475 300 430
-        Z
-        "
-        fill="#fff"
-      />
+        <!-- ROSE BASE -->
+        <path
+          class="black"
+          d="
+          M348 532
+          C378 555 409 566 442 567
+          C476 583 512 590 548 580
+          C580 587 615 575 637 555
+          C632 588 611 609 580 617
+          C544 634 507 627 478 614
+          C442 625 404 612 384 588
+          C362 580 350 559 348 532
+          Z"/>
 
-      <path
-        d="
-        M455 315
-        C505 280 565 300 590 350
-        C555 330 520 350 500 380
-        C480 415 490 450 515 475
-        C465 455 435 390 455 315
-        Z
-        "
-        fill="#fff"
-      />
+        <!-- BASE LIGHT -->
+        <path
+          class="white"
+          d="
+          M384 557
+          C411 574 440 580 468 577
+          C493 591 520 594 545 587
+          C517 611 486 608 463 596
+          C433 606 405 591 384 557
+          Z"/>
 
-      <!-- BLACK PETAL FOLDS -->
-
-      <path
-        d="
-        M390 405
-        C410 350 465 320 520 340
-        C485 350 465 380 465 410
-        C465 445 490 465 520 480
-        C465 480 405 455 390 405
-        Z
-        "
-        fill="#000"
-      />
-
-      <path
-        d="
-        M520 370
-        C555 335 605 345 625 380
-        C595 370 570 390 560 415
-        C550 440 565 465 590 480
-        C550 475 520 440 520 370
-        Z
-        "
-        fill="#000"
-      />
-
-      <!-- CENTER CURL -->
-
-      <path
-        d="
-        M445 420
-        C465 360 530 330 590 350
-        C650 370 670 425 635 470
-        C600 515 535 515 490 480
-        C455 455 460 415 495 395
-        C530 375 570 390 585 420
-        C595 445 580 465 555 468
-        C530 470 515 455 520 435
-        C525 420 540 415 555 422
-        "
-        fill="none"
-        stroke="#fff"
-        stroke-width="18"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-
-      <!-- SMALL LIGHT CATCHES -->
-
-      <ellipse cx="820" cy="350" rx="15" ry="9" fill="#fff"/>
-      <ellipse cx="745" cy="245" rx="14" ry="8" fill="#fff"/>
-      <ellipse cx="625" cy="205" rx="11" ry="7" fill="#fff"/>
-
-      <!-- ===================== -->
-      <!-- STEM -->
-      <!-- ===================== -->
-
-      <!-- Entire stem -->
-      <path
-        d="
-        M600 625
-        C610 720 595 805 555 890
-        C530 945 500 995 465 1045
-        "
-        fill="none"
-        stroke="#000"
-        stroke-width="78"
-        stroke-linecap="round"
-      />
-
-      <!-- RIGHT SIDE OF STEM ILLUMINATED -->
-
-      <path
-        d="
-        M620 640
-        C630 730 615 815 580 890
-        C555 940 530 985 500 1025
-        "
-        fill="none"
-        stroke="#fff"
-        stroke-width="20"
-        stroke-linecap="round"
-      />
-
-      <!-- ===================== -->
-      <!-- LEAF -->
-      <!-- ===================== -->
-
-      <path
-        d="
-        M570 790
-        C490 720 380 730 300 800
-        C390 850 490 845 570 790
-        Z
-        "
-        fill="#000"
-      />
-
-      <!-- Right/top side of leaf catches light -->
-
-      <path
-        d="
-        M320 800
-        C395 775 475 790 540 800
-        "
-        fill="none"
-        stroke="#fff"
-        stroke-width="15"
-        stroke-linecap="round"
-      />
-
-      <!-- ===================== -->
-      <!-- LIGHT SOURCE -->
-      <!-- ===================== -->
-
-      <circle
-        cx="1080"
-        cy="100"
-        r="35"
-        fill="#fff"
-      />
-
-      <circle
-        cx="1080"
-        cy="100"
-        r="70"
-        fill="none"
-        stroke="#fff"
-        stroke-width="3"
-      />
-
-    </svg>
-
+      </svg>
+    </div>
   </div>
 
 
   <!-- PUZZLE WINDOW -->
-
   <div class="puzzle-window" id="puzzleWindow">
 
     <div class="window-bar" id="windowBar">
       <span>FLOWER 8273</span>
 
       <div>
-        <button type="button" id="minimizeButton">−</button>
-        <button type="button" id="closeButton">×</button>
+        <button id="minimizeButton">−</button>
+        <button id="closeButton">×</button>
       </div>
     </div>
 
