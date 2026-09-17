@@ -45,5 +45,30 @@
   background: #000;
   z-index: 50;
 "></div>
+  <div id="thornPuzzle" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: #fff;
+  z-index: 200;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+">
+  <h2 id="puzzleType"></h2>
+
+  <p>UNJUMBLE THE CODE.</p>
+
+  <div id="numberGrid" style="
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 8px;
+    justify-content: center;
+    margin: 30px auto;
+  "></div>
+
+  <p id="unlockMessage"></p>
+  </div>
 </body>
 </html>
