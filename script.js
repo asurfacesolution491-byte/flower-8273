@@ -36,3 +36,22 @@ if (puzzleWindow && windowBar) {
     dragging = false;
   });
 }
+const puzzleInput = document.getElementById("puzzleInput");
+
+if (puzzleInput) {
+  puzzleInput.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter") return;
+
+    const answer = puzzleInput.value.trim().toUpperCase();
+
+    if (answer === "THORNS") {
+      puzzleInput.value = "";
+      puzzleInput.placeholder = "Something changed...";
+      
+      console.log("THORNS accepted.");
+    } else {
+      puzzleInput.value = "";
+      puzzleInput.placeholder = "No.";
+    }
+  });
+}
